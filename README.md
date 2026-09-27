@@ -49,6 +49,15 @@ Static files in `site/` (no build tools, no dependencies). `node scripts/build.m
 merges the events into `site/events.json`. Local preview:
 `node scripts/build.mjs && python3 -m http.server -d site`.
 
+## Link checking
+
+`node scripts/check-links.mjs` probes every source/image URL (HEAD first, with a
+polite rate limit — concurrency 2, 300 ms apart) and prints a markdown report of
+dead links, exiting non-zero when any are found. The weekly
+`.github/workflows/links.yml` run turns that report into a GitHub issue. HTTP 403
+is treated as likely bot-blocking and only reported for manual verification, not
+as a dead link.
+
 ## Rules for agents (and humans)
 
 1. **One task per PR, small diffs.** Add or improve a handful of events, or one UI change.
