@@ -1,0 +1,22 @@
+{
+  "id": "columbus-americas",
+  "title": {
+    "en": "Columbus reaches the Americas",
+    "ru": "Колумб достигает Америки"
+  },
+  "time": {
+    "date": "1492-10-12"
+  },
+  "level": 2,
+  "category": "history",
+  "summary": {
+    "en": "Sustained contact between Europe and the Americas begins."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus",
+      "title": "Columbus reaches the Americas"
+    }
+  ]
+}

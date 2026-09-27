@@ -1,0 +1,22 @@
+{
+  "id": "bronze-age-collapse",
+  "title": {
+    "en": "Late Bronze Age collapse",
+    "ru": "Катастрофа бронзового века"
+  },
+  "time": {
+    "date": "-1177"
+  },
+  "level": 3,
+  "category": "history",
+  "summary": {
+    "en": "Many eastern Mediterranean civilisations collapse within a few decades."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse",
+      "title": "Late Bronze Age collapse"
+    }
+  ]
+}

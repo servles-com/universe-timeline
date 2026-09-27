@@ -1,0 +1,23 @@
+{
+  "id": "tiktaalik",
+  "title": {
+    "en": "Tiktaalik and the fish-to-tetrapod transition",
+    "ru": "Тиктаалик и выход позвоночных на сушу"
+  },
+  "time": {
+    "ya": 375000000.0,
+    "uncertainty": 5000000.0
+  },
+  "level": 3,
+  "category": "biology",
+  "summary": {
+    "en": "A transitional fossil between fish and four-limbed vertebrates."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Tiktaalik",
+      "title": "Tiktaalik and the fish-to-tetrapod transition"
+    }
+  ]
+}

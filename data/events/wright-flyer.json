@@ -1,0 +1,22 @@
+{
+  "id": "wright-flyer",
+  "title": {
+    "en": "First powered airplane flight",
+    "ru": "Первый полёт самолёта"
+  },
+  "time": {
+    "date": "1903-12-17"
+  },
+  "level": 3,
+  "category": "technology",
+  "summary": {
+    "en": "The Wright brothers fly at Kitty Hawk."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wright_Flyer",
+      "title": "First powered airplane flight"
+    }
+  ]
+}

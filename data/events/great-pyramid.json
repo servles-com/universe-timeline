@@ -1,0 +1,22 @@
+{
+  "id": "great-pyramid",
+  "title": {
+    "en": "Great Pyramid of Giza built",
+    "ru": "Строительство пирамиды Хеопса"
+  },
+  "time": {
+    "date": "-2560"
+  },
+  "level": 3,
+  "category": "history",
+  "summary": {
+    "en": "Built for the pharaoh Khufu in the Fourth Dynasty."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+      "title": "Great Pyramid of Giza built"
+    }
+  ]
+}

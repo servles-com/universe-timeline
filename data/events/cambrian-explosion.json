@@ -1,0 +1,23 @@
+{
+  "id": "cambrian-explosion",
+  "title": {
+    "en": "Cambrian explosion",
+    "ru": "Кембрийский взрыв"
+  },
+  "time": {
+    "ya": 538800000.0,
+    "uncertainty": 2000000.0
+  },
+  "level": 1,
+  "category": "biology",
+  "summary": {
+    "en": "Most major animal phyla appear in the fossil record within a geologically short time."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cambrian_explosion",
+      "title": "Cambrian explosion"
+    }
+  ]
+}

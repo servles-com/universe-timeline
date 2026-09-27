@@ -1,0 +1,22 @@
+{
+  "id": "fall-of-western-rome",
+  "title": {
+    "en": "Fall of the Western Roman Empire",
+    "ru": "Падение Западной Римской империи"
+  },
+  "time": {
+    "date": "0476"
+  },
+  "level": 2,
+  "category": "history",
+  "summary": {
+    "en": "Romulus Augustulus is deposed."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire",
+      "title": "Fall of the Western Roman Empire"
+    }
+  ]
+}

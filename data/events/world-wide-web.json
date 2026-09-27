@@ -1,0 +1,22 @@
+{
+  "id": "world-wide-web",
+  "title": {
+    "en": "World Wide Web proposed",
+    "ru": "Предложение Всемирной паутины"
+  },
+  "time": {
+    "date": "1989-03"
+  },
+  "level": 2,
+  "category": "technology",
+  "summary": {
+    "en": "Tim Berners-Lee proposes the Web at CERN."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "title": "World Wide Web proposed"
+    }
+  ]
+}

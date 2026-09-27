@@ -1,0 +1,23 @@
+{
+  "id": "first-dinosaurs",
+  "title": {
+    "en": "First dinosaurs",
+    "ru": "Первые динозавры"
+  },
+  "time": {
+    "ya": 233000000.0,
+    "uncertainty": 10000000.0
+  },
+  "level": 2,
+  "category": "biology",
+  "summary": {
+    "en": "Dinosaurs appear in the Triassic."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Dinosaur",
+      "title": "First dinosaurs"
+    }
+  ]
+}

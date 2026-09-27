@@ -1,0 +1,23 @@
+{
+  "id": "pangaea-breakup",
+  "title": {
+    "en": "Breakup of Pangaea begins",
+    "ru": "Начало распада Пангеи"
+  },
+  "time": {
+    "ya": 200000000.0,
+    "uncertainty": 20000000.0
+  },
+  "level": 3,
+  "category": "geology",
+  "summary": {
+    "en": "The supercontinent starts to rift apart, opening the Atlantic."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Pangaea",
+      "title": "Breakup of Pangaea begins"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "earliest-stromatolites",
+  "title": {
+    "en": "Earliest widely accepted evidence of life (stromatolites)",
+    "ru": "Древнейшие общепризнанные следы жизни (строматолиты)"
+  },
+  "time": {
+    "ya": 3480000000.0,
+    "uncertainty": 50000000.0
+  },
+  "level": 2,
+  "category": "biology",
+  "summary": {
+    "en": "Layered microbial structures in Western Australia record early life."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stromatolite",
+      "title": "Earliest widely accepted evidence of life (stromatolites)"
+    }
+  ]
+}

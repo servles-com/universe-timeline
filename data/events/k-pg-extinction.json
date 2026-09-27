@@ -1,0 +1,23 @@
+{
+  "id": "k-pg-extinction",
+  "title": {
+    "en": "Cretaceous–Paleogene extinction",
+    "ru": "Мел-палеогеновое вымирание"
+  },
+  "time": {
+    "ya": 66000000.0,
+    "uncertainty": 50000.0
+  },
+  "level": 1,
+  "category": "biology",
+  "summary": {
+    "en": "An asteroid impact at Chicxulub ends the age of non-avian dinosaurs."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Cretaceous–Paleogene_extinction_event",
+      "title": "Cretaceous–Paleogene extinction"
+    }
+  ]
+}

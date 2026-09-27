@@ -1,0 +1,23 @@
+{
+  "id": "first-land-plants",
+  "title": {
+    "en": "First land plants",
+    "ru": "Первые наземные растения"
+  },
+  "time": {
+    "ya": 470000000.0,
+    "uncertainty": 20000000.0
+  },
+  "level": 2,
+  "category": "biology",
+  "summary": {
+    "en": "Plants colonise land, transforming soils and the atmosphere."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Evolutionary_history_of_plants",
+      "title": "First land plants"
+    }
+  ]
+}

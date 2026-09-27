@@ -1,0 +1,23 @@
+{
+  "id": "solar-system-formation",
+  "title": {
+    "en": "Formation of the Solar System",
+    "ru": "Образование Солнечной системы"
+  },
+  "time": {
+    "ya": 4568000000.0,
+    "uncertainty": 1000000.0
+  },
+  "level": 1,
+  "category": "cosmology",
+  "summary": {
+    "en": "A molecular cloud collapses to form the Sun and its protoplanetary disk."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System",
+      "title": "Formation of the Solar System"
+    }
+  ]
+}

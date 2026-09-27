@@ -1,0 +1,23 @@
+{
+  "id": "oldest-zircons",
+  "title": {
+    "en": "Oldest known terrestrial minerals (Jack Hills zircons)",
+    "ru": "Древнейшие земные минералы (цирконы Джек-Хиллз)"
+  },
+  "time": {
+    "ya": 4400000000.0,
+    "uncertainty": 10000000.0
+  },
+  "level": 3,
+  "category": "geology",
+  "summary": {
+    "en": "Zircon crystals hint at liquid water and continental crust very early in Earth history."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hadean_zircon",
+      "title": "Oldest known terrestrial minerals (Jack Hills zircons)"
+    }
+  ]
+}

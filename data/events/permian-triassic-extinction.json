@@ -1,0 +1,23 @@
+{
+  "id": "permian-triassic-extinction",
+  "title": {
+    "en": "Permian–Triassic extinction (\"Great Dying\")",
+    "ru": "Пермское вымирание («Великое вымирание»)"
+  },
+  "time": {
+    "ya": 251900000.0,
+    "uncertainty": 100000.0
+  },
+  "level": 1,
+  "category": "biology",
+  "summary": {
+    "en": "The largest known mass extinction; most marine species disappear."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Permian–Triassic_extinction_event",
+      "title": "Permian–Triassic extinction (\"Great Dying\")"
+    }
+  ]
+}

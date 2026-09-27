@@ -1,0 +1,23 @@
+{
+  "id": "first-eukaryotes",
+  "title": {
+    "en": "First eukaryotes",
+    "ru": "Первые эукариоты"
+  },
+  "time": {
+    "ya": 1800000000.0,
+    "uncertainty": 300000000.0
+  },
+  "level": 2,
+  "category": "biology",
+  "summary": {
+    "en": "Cells with a nucleus and organelles appear."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Eukaryote",
+      "title": "First eukaryotes"
+    }
+  ]
+}

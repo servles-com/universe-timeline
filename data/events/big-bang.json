@@ -1,0 +1,23 @@
+{
+  "id": "big-bang",
+  "title": {
+    "en": "Big Bang",
+    "ru": "Большой взрыв"
+  },
+  "time": {
+    "ya": 13787000000.0,
+    "uncertainty": 20000000.0
+  },
+  "level": 1,
+  "category": "cosmology",
+  "summary": {
+    "en": "The universe begins expanding from an extremely hot, dense state."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Big_Bang",
+      "title": "Big Bang"
+    }
+  ]
+}

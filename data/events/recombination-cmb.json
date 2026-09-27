@@ -1,0 +1,23 @@
+{
+  "id": "recombination-cmb",
+  "title": {
+    "en": "Recombination and the cosmic microwave background",
+    "ru": "Рекомбинация и реликтовое излучение"
+  },
+  "time": {
+    "ya": 13786600000.0,
+    "uncertainty": 20000000.0
+  },
+  "level": 2,
+  "category": "cosmology",
+  "summary": {
+    "en": "About 380,000 years after the Big Bang, atoms form and the universe becomes transparent; the CMB is released."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Recombination_(cosmology)",
+      "title": "Recombination and the cosmic microwave background"
+    }
+  ]
+}

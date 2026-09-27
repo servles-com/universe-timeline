@@ -1,0 +1,23 @@
+{
+  "id": "great-oxidation-event",
+  "title": {
+    "en": "Great Oxidation Event",
+    "ru": "Кислородная катастрофа"
+  },
+  "time": {
+    "ya": 2400000000.0,
+    "uncertainty": 100000000.0
+  },
+  "level": 1,
+  "category": "biology",
+  "summary": {
+    "en": "Oxygen produced by cyanobacteria accumulates in the atmosphere."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Great_Oxidation_Event",
+      "title": "Great Oxidation Event"
+    }
+  ]
+}

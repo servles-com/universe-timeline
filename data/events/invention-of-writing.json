@@ -1,0 +1,22 @@
+{
+  "id": "invention-of-writing",
+  "title": {
+    "en": "Invention of writing (Mesopotamia)",
+    "ru": "Изобретение письменности (Месопотамия)"
+  },
+  "time": {
+    "date": "-3200"
+  },
+  "level": 1,
+  "category": "history",
+  "summary": {
+    "en": "Cuneiform emerges in Sumer."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/History_of_writing",
+      "title": "Invention of writing (Mesopotamia)"
+    }
+  ]
+}

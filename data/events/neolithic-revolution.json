@@ -1,0 +1,23 @@
+{
+  "id": "neolithic-revolution",
+  "title": {
+    "en": "Neolithic Revolution (agriculture)",
+    "ru": "Неолитическая революция (земледелие)"
+  },
+  "time": {
+    "ya": 12000.0,
+    "uncertainty": 1000.0
+  },
+  "level": 1,
+  "category": "history",
+  "summary": {
+    "en": "Farming and permanent settlements begin in the Fertile Crescent."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Neolithic_Revolution",
+      "title": "Neolithic Revolution (agriculture)"
+    }
+  ]
+}

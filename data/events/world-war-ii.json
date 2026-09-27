@@ -1,0 +1,22 @@
+{
+  "id": "world-war-ii",
+  "title": {
+    "en": "World War II begins",
+    "ru": "Начало Второй мировой войны"
+  },
+  "time": {
+    "date": "1939-09-01"
+  },
+  "level": 2,
+  "category": "history",
+  "summary": {
+    "en": "Germany invades Poland."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/World_War_II",
+      "title": "World War II begins"
+    }
+  ]
+}

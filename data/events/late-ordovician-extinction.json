@@ -1,0 +1,23 @@
+{
+  "id": "late-ordovician-extinction",
+  "title": {
+    "en": "Late Ordovician mass extinction",
+    "ru": "Ордовикско-силурийское вымирание"
+  },
+  "time": {
+    "ya": 444000000.0,
+    "uncertainty": 2000000.0
+  },
+  "level": 2,
+  "category": "biology",
+  "summary": {
+    "en": "The first of the \"Big Five\" mass extinctions, linked to glaciation."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Late_Ordovician_mass_extinction",
+      "title": "Late Ordovician mass extinction"
+    }
+  ]
+}

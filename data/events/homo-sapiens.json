@@ -1,0 +1,23 @@
+{
+  "id": "homo-sapiens",
+  "title": {
+    "en": "Anatomically modern Homo sapiens",
+    "ru": "Анатомически современный Homo sapiens"
+  },
+  "time": {
+    "ya": 300000.0,
+    "uncertainty": 30000.0
+  },
+  "level": 1,
+  "category": "human-evolution",
+  "summary": {
+    "en": "Fossils from Jebel Irhoud, Morocco, are the oldest known of our species."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Homo_sapiens",
+      "title": "Anatomically modern Homo sapiens"
+    }
+  ]
+}

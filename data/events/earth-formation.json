@@ -1,0 +1,23 @@
+{
+  "id": "earth-formation",
+  "title": {
+    "en": "Formation of Earth",
+    "ru": "Образование Земли"
+  },
+  "time": {
+    "ya": 4540000000.0,
+    "uncertainty": 50000000.0
+  },
+  "level": 1,
+  "category": "geology",
+  "summary": {
+    "en": "Earth accretes from the solar nebula."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Age_of_Earth",
+      "title": "Formation of Earth"
+    }
+  ]
+}

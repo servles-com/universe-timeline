@@ -1,0 +1,23 @@
+{
+  "id": "out-of-africa",
+  "title": {
+    "en": "Major dispersal of modern humans out of Africa",
+    "ru": "Массовый выход современных людей из Африки"
+  },
+  "time": {
+    "ya": 60000.0,
+    "uncertainty": 10000.0
+  },
+  "level": 2,
+  "category": "human-evolution",
+  "summary": {
+    "en": "Modern humans spread across Eurasia and later to Australia and the Americas."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Recent_African_origin_of_modern_humans",
+      "title": "Major dispersal of modern humans out of Africa"
+    }
+  ]
+}

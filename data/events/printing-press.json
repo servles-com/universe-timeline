@@ -1,0 +1,22 @@
+{
+  "id": "printing-press",
+  "title": {
+    "en": "Gutenberg printing press",
+    "ru": "Печатный станок Гутенберга"
+  },
+  "time": {
+    "date": "1440"
+  },
+  "level": 2,
+  "category": "technology",
+  "summary": {
+    "en": "Movable-type printing spreads across Europe."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Printing_press",
+      "title": "Gutenberg printing press"
+    }
+  ]
+}

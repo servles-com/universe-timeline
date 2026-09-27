@@ -1,0 +1,22 @@
+{
+  "id": "newton-principia",
+  "title": {
+    "en": "Newton publishes the Principia",
+    "ru": "Ньютон публикует «Начала»"
+  },
+  "time": {
+    "date": "1687-07-05"
+  },
+  "level": 3,
+  "category": "science",
+  "summary": {
+    "en": "Laws of motion and universal gravitation."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Philosophiæ_Naturalis_Principia_Mathematica",
+      "title": "Newton publishes the Principia"
+    }
+  ]
+}

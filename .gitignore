@@ -1,0 +1,4 @@
+site/events.json
+site/lib.mjs
+node_modules/
+.DS_Store

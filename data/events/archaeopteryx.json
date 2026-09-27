@@ -1,0 +1,23 @@
+{
+  "id": "archaeopteryx",
+  "title": {
+    "en": "Archaeopteryx",
+    "ru": "Археоптерикс"
+  },
+  "time": {
+    "ya": 150000000.0,
+    "uncertainty": 2000000.0
+  },
+  "level": 3,
+  "category": "biology",
+  "summary": {
+    "en": "A feathered dinosaur showing the link between dinosaurs and birds."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Archaeopteryx",
+      "title": "Archaeopteryx"
+    }
+  ]
+}

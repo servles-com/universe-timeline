@@ -1,0 +1,23 @@
+{
+  "id": "control-of-fire",
+  "title": {
+    "en": "Control of fire by early humans",
+    "ru": "Освоение огня"
+  },
+  "time": {
+    "ya": 1000000.0,
+    "uncertainty": 500000.0
+  },
+  "level": 3,
+  "category": "human-evolution",
+  "summary": {
+    "en": "Evidence of controlled fire use appears; dates remain debated."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Control_of_fire_by_early_humans",
+      "title": "Control of fire by early humans"
+    }
+  ]
+}

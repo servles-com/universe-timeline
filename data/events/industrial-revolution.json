@@ -1,0 +1,22 @@
+{
+  "id": "industrial-revolution",
+  "title": {
+    "en": "Industrial Revolution",
+    "ru": "Промышленная революция"
+  },
+  "time": {
+    "date": "1760"
+  },
+  "level": 1,
+  "category": "technology",
+  "summary": {
+    "en": "Mechanised manufacturing begins in Britain."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Industrial_Revolution",
+      "title": "Industrial Revolution"
+    }
+  ]
+}

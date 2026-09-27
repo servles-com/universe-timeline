@@ -1,0 +1,22 @@
+{
+  "id": "human-genome",
+  "title": {
+    "en": "Human Genome Project completed",
+    "ru": "Завершение проекта «Геном человека»"
+  },
+  "time": {
+    "date": "2003-04"
+  },
+  "level": 3,
+  "category": "science",
+  "summary": {
+    "en": "The human genome is sequenced."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Human_Genome_Project",
+      "title": "Human Genome Project completed"
+    }
+  ]
+}

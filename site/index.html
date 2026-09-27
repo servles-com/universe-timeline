@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Universe Timeline</title>
+<meta name="description" content="A zoomable timeline from the Big Bang to today. Zoom in to see smaller events.">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Apply the saved/system theme before paint to avoid a flash.
+  try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch {}
+</script>
+</head>
+<body>
+<header>
+  <h1>Universe Timeline</h1>
+  <div class="controls">
+    <span id="range" class="range" aria-live="polite"></span>
+    <button id="lang" type="button" title="Language">RU</button>
+    <button id="theme" type="button" title="Light / dark">◐</button>
+    <button id="reset" type="button" title="Show everything">⤢</button>
+  </div>
+</header>
+<main>
+  <svg id="timeline" role="img" aria-label="Timeline of the universe"></svg>
+  <p class="hint">Scroll or pinch to zoom · drag to pan · tap an event</p>
+</main>
+<aside id="panel" hidden>
+  <button id="close" type="button" aria-label="Close">×</button>
+  <div id="panel-body"></div>
+</aside>
+<footer>
+  <span id="count"></span> ·
+  <a href="https://github.com/servles-com/universe-timeline">built by AI agents, open data</a>
+</footer>
+<script src="app.js" type="module"></script>
+</body>
+</html>

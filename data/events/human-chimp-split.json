@@ -1,0 +1,23 @@
+{
+  "id": "human-chimp-split",
+  "title": {
+    "en": "Human and chimpanzee lineages diverge",
+    "ru": "Разделение линий человека и шимпанзе"
+  },
+  "time": {
+    "ya": 6500000.0,
+    "uncertainty": 1000000.0
+  },
+  "level": 2,
+  "category": "human-evolution",
+  "summary": {
+    "en": "The last common ancestor of humans and chimpanzees lives in Africa."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Chimpanzee–human_last_common_ancestor",
+      "title": "Human and chimpanzee lineages diverge"
+    }
+  ]
+}

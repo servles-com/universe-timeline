@@ -1,0 +1,22 @@
+{
+  "id": "apollo-11",
+  "title": {
+    "en": "Apollo 11 Moon landing",
+    "ru": "Высадка на Луну (Аполлон-11)"
+  },
+  "time": {
+    "date": "1969-07-20"
+  },
+  "level": 1,
+  "category": "technology",
+  "summary": {
+    "en": "Humans walk on the Moon for the first time."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Apollo_11",
+      "title": "Apollo 11 Moon landing"
+    }
+  ]
+}

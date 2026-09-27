@@ -1,0 +1,23 @@
+{
+  "id": "last-glacial-maximum",
+  "title": {
+    "en": "Last Glacial Maximum",
+    "ru": "Последний ледниковый максимум"
+  },
+  "time": {
+    "ya": 23000.0,
+    "uncertainty": 3000.0
+  },
+  "level": 3,
+  "category": "geology",
+  "summary": {
+    "en": "Ice sheets reach their greatest extent in the last glacial period."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Last_Glacial_Maximum",
+      "title": "Last Glacial Maximum"
+    }
+  ]
+}

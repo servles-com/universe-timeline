@@ -1,0 +1,23 @@
+{
+  "id": "petm",
+  "title": {
+    "en": "Paleocene–Eocene Thermal Maximum",
+    "ru": "Палеоцен-эоценовый термический максимум"
+  },
+  "time": {
+    "ya": 56000000.0,
+    "uncertainty": 100000.0
+  },
+  "level": 4,
+  "category": "geology",
+  "summary": {
+    "en": "A rapid global warming event driven by a massive carbon release."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Paleocene–Eocene_Thermal_Maximum",
+      "title": "Paleocene–Eocene Thermal Maximum"
+    }
+  ]
+}

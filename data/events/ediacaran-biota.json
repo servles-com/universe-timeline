@@ -1,0 +1,23 @@
+{
+  "id": "ediacaran-biota",
+  "title": {
+    "en": "Ediacaran biota",
+    "ru": "Эдиакарская биота"
+  },
+  "time": {
+    "ya": 575000000.0,
+    "uncertainty": 10000000.0
+  },
+  "level": 3,
+  "category": "biology",
+  "summary": {
+    "en": "The first large, complex multicellular organisms."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ediacaran_biota",
+      "title": "Ediacaran biota"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": "late-devonian-extinction",
+  "title": {
+    "en": "Late Devonian extinction",
+    "ru": "Позднедевонское вымирание"
+  },
+  "time": {
+    "ya": 372000000.0,
+    "uncertainty": 5000000.0
+  },
+  "level": 3,
+  "category": "biology",
+  "summary": {
+    "en": "A series of extinction pulses that devastated reef ecosystems."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Late_Devonian_extinction",
+      "title": "Late Devonian extinction"
+    }
+  ]
+}

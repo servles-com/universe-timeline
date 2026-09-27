@@ -1,0 +1,23 @@
+{
+  "id": "first-stars",
+  "title": {
+    "en": "First stars (Population III)",
+    "ru": "Первые звёзды (население III)"
+  },
+  "time": {
+    "ya": 13600000000.0,
+    "uncertainty": 100000000.0
+  },
+  "level": 2,
+  "category": "cosmology",
+  "summary": {
+    "en": "The first stars ignite roughly 100–200 million years after the Big Bang, ending the cosmic dark ages."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Stellar_population",
+      "title": "First stars (Population III)"
+    }
+  ]
+}

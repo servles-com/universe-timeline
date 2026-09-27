@@ -1,0 +1,22 @@
+{
+  "id": "athenian-democracy",
+  "title": {
+    "en": "Athenian democracy (Cleisthenes reforms)",
+    "ru": "Афинская демократия (реформы Клисфена)"
+  },
+  "time": {
+    "date": "-0508"
+  },
+  "level": 3,
+  "category": "history",
+  "summary": {
+    "en": "Reforms establish a democratic system in Athens."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Athenian_democracy",
+      "title": "Athenian democracy (Cleisthenes reforms)"
+    }
+  ]
+}

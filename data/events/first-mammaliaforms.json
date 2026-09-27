@@ -1,0 +1,23 @@
+{
+  "id": "first-mammaliaforms",
+  "title": {
+    "en": "First mammaliaforms",
+    "ru": "Первые маммалиаформы"
+  },
+  "time": {
+    "ya": 225000000.0,
+    "uncertainty": 10000000.0
+  },
+  "level": 3,
+  "category": "biology",
+  "summary": {
+    "en": "Early relatives of mammals appear in the Late Triassic."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mammaliaformes",
+      "title": "First mammaliaforms"
+    }
+  ]
+}

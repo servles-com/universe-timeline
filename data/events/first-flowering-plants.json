@@ -1,0 +1,23 @@
+{
+  "id": "first-flowering-plants",
+  "title": {
+    "en": "First flowering plants",
+    "ru": "Первые цветковые растения"
+  },
+  "time": {
+    "ya": 130000000.0,
+    "uncertainty": 10000000.0
+  },
+  "level": 3,
+  "category": "biology",
+  "summary": {
+    "en": "Angiosperms appear and later come to dominate land vegetation."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Flowering_plant",
+      "title": "First flowering plants"
+    }
+  ]
+}

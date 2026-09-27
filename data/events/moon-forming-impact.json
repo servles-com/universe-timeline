@@ -1,0 +1,23 @@
+{
+  "id": "moon-forming-impact",
+  "title": {
+    "en": "Moon-forming giant impact",
+    "ru": "Столкновение, образовавшее Луну"
+  },
+  "time": {
+    "ya": 4510000000.0,
+    "uncertainty": 50000000.0
+  },
+  "level": 2,
+  "category": "geology",
+  "summary": {
+    "en": "A Mars-sized body (Theia) collides with the proto-Earth; debris forms the Moon."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Giant-impact_hypothesis",
+      "title": "Moon-forming giant impact"
+    }
+  ]
+}
