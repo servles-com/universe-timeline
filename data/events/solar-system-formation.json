@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Formation_and_evolution_of_the_Solar_System",
       "title": "Formation of the Solar System"
+    },
+    {
+      "type": "paper",
+      "url": "https://arxiv.org/abs/0903.3008",
+      "title": "Solar System formation"
     }
   ]
 }

@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Big_Bang",
       "title": "Big Bang"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1051/0004-6361/201833910",
+      "title": "Planck 2018 results. VI. Cosmological parameters"
     }
   ]
 }

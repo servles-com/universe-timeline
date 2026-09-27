@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Stellar_population",
       "title": "First stars (Population III)"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1088/0034-4885/76/11/112901",
+      "title": "Formation of the first stars"
     }
   ]
 }

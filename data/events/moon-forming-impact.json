@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Giant-impact_hypothesis",
       "title": "Moon-forming giant impact"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1016/j.epsl.2007.07.055",
+      "title": "Equilibration in the aftermath of the lunar-forming giant impact"
     }
   ]
 }

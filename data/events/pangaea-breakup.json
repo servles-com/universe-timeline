@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Pangaea",
       "title": "Breakup of Pangaea begins"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1086/524012",
+      "title": "Inevitability of Plate Tectonics on Super-Earths"
     }
   ]
 }

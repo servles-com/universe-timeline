@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Last_Glacial_Maximum",
       "title": "Last Glacial Maximum"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1073/pnas.1411762111",
+      "title": "Sea level and global ice volumes from the Last Glacial Maximum to the Holocene"
     }
   ]
 }
