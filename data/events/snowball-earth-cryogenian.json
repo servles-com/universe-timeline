@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Snowball_Earth",
       "title": "Cryogenian \"Snowball Earth\" glaciations"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.5194/esd-14-533-2023",
+      "title": "Tracing the Snowball bifurcation of aquaplanets through time reveals a fundamental shift in critical-state dynamics"
     }
   ]
 }

@@ -13,11 +13,16 @@
   "summary": {
     "en": "A rapid global warming event driven by a massive carbon release."
   },
-  "sources": [
+"sources": [
     {
       "type": "wikipedia",
-      "url": "https://en.wikipedia.org/wiki/Paleocene–Eocene_Thermal_Maximum",
+      "url": "https://en.wikipedia.org/wiki/Paleocene%E2%80%93Eocene_Thermal_Maximum",
       "title": "Paleocene–Eocene Thermal Maximum"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1126/science.aax0612",
+      "title": "Solar system chaos and the Paleocene-Eocene boundary age constrained by geology and astronomy"
     }
   ]
 }

@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Hadean_zircon",
       "title": "Oldest known terrestrial minerals (Jack Hills zircons)"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1016/j.icarus.2015.10.023",
+      "title": "Excavation and melting of the Hadean continental crust by Late Heavy Bombardment"
     }
   ]
 }

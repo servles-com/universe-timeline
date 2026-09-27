@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Age_of_Earth",
       "title": "Formation of Earth"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1016/0016-7037(56)90036-9",
+      "title": "Age of meteorites and the earth"
     }
   ]
 }

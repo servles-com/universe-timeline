@@ -18,6 +18,11 @@
       "type": "wikipedia",
       "url": "https://en.wikipedia.org/wiki/Recombination_(cosmology)",
       "title": "Recombination and the cosmic microwave background"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1002/asna.200911237",
+      "title": "Signals from the epoch of cosmological recombination – Karl Schwarzschild Award Lecture 2008"
     }
   ]
 }
