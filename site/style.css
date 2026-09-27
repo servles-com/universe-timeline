@@ -35,6 +35,18 @@ button {
   border-radius: 8px; min-width: 36px; height: 36px; padding: 0 10px; cursor: pointer;
 }
 button:hover { border-color: var(--accent); }
+.controls input {
+  font: inherit; color: var(--fg); background: transparent; border: 1px solid var(--line);
+  border-radius: 8px; min-width: 36px; height: 36px; padding: 0 10px; cursor: text;
+}
+.controls input::placeholder {
+  color: var(--muted);
+  opacity: 1; /* Firefox */
+}
+.controls input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
 main { position: relative; min-height: 0; }
 svg { width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; user-select: none; }
 svg.dragging { cursor: grabbing; }
