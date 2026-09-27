@@ -10,6 +10,7 @@ let view = { ...FULL };
 let events = [];
 let lang = 'en';
 const NOW = nowYear();
+const searchInput = document.getElementById('search');
 
 const el = (tag, attrs = {}, parent) => {
   const n = document.createElementNS(NS, tag);
@@ -80,20 +81,20 @@ function render() {
     const w = label.length * 7.2 + 14;
     const left = px + w > W ? px - w : px;
     let row = rows.findIndex(r => r < left);
-    if (row === -1 && rows.length < maxRows) { row = rows.length; rows.push(-Infinity); }
-    const color = `var(--c-${e.category})`;
-    const node = el('g', { class: `event l${e.level}`, tabindex: 0, role: 'button', 'aria-label': label }, g);
-    el('circle', { cx: px, cy: baseY, r: e.level === 1 ? 6 : 4, fill: color }, node);
-    if (row !== -1) {
-      rows[row] = left + w;
-      const y = baseY - 18 - row * rowH;
-      el('line', { class: 'stem', x1: px, x2: px, y1: baseY, y2: y + 4, stroke: color }, node);
-      const flip = px + w > W;                       // near the right edge: label to the left
-      const t = el('text', { x: flip ? px - 4 : px + 4, y, 'text-anchor': flip ? 'end' : 'start' }, node);
-      t.textContent = label;
-    }
-    node.addEventListener('click', () => open(e));
-    node.addEventListener('keydown', k => { if (k.key === 'Enter') open(e); });
+  if (row === -1 && rows.length < maxRows) { row = rows.length; rows.push(-Infinity); }
+  const color = `var(--c-${e.category})`;
+  const node = el('g', { class: `event l${e.level}`, tabindex: 0, role: 'button', 'aria-label': label }, g);
+  el('circle', { cx: px, cy: baseY, r: e.level === 1 ? 6 : 4, fill: color }, node);
+  if (row !== -1) {
+    rows[row] = left + w;
+    const y = baseY - 18 - row * rowH;
+    el('line', { class: 'stem', x1: px, x2: px, y1: baseY, y2: y + 4, stroke: color }, node);
+    const flip = px + w > W;                       // near the right edge: label to the left
+    const t = el('text', { x: flip ? px - 4 : px + 4, y, 'text-anchor': flip ? 'end' : 'start' }, node);
+    t.textContent = label;
+  }
+  node.addEventListener('click', () => open(e));
+  node.addEventListener('keydown', k => { if (k.key === 'Enter') open(e); });
   }
   document.getElementById('range').textContent =
     `${formatAgo(10 ** view.hi)} → ${formatAgo(10 ** view.lo)} · detail ${lvl}/6 · ${visible.length} shown`;
@@ -101,17 +102,17 @@ function render() {
 
 function open(e) {
   const body = document.getElementById('panel-body');
-  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&', '<': '<', '>': '>', '"': '"', "'": ''' }[c]));
   const imgs = (e.images ?? []).map(i =>
     `<img src="${esc(i.url)}" alt="" loading="lazy"><p class="credit">${esc(i.credit)} · ${esc(i.license)}</p>`).join('');
   const srcs = e.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title ?? s.url)}</a> <small>(${esc(s.type)})</small></li>`).join('');
   body.innerHTML = `
-    <span class="tag" style="background:var(--c-${esc(e.category)})">${esc(e.category)} · level ${e.level}</span>
-    <h2>${esc(e.title[lang] ?? e.title.en)}</h2>
-    <p class="when">${esc(formatWhen(e))}</p>
-    ${imgs}
-    <p>${esc(e.summary[lang] ?? e.summary.en)}</p>
-    <h3>Sources</h3><ul>${srcs}</ul>`;
+     <span class="tag" style="background:var(--c-${esc(e.category)})">${esc(e.category)} · level ${e.level}</span>
+     <h2>${esc(e.title[lang] ?? e.title.en)}</h2>
+     <p class="when">${esc(formatWhen(e))}</p>
+     ${imgs}
+     <p>${esc(e.summary[lang] ?? e.summary.en)}</p>
+     <h3>Sources</h3><ul>${srcs}</ul>`;
   document.getElementById('panel').hidden = false;
 }
 
@@ -132,6 +133,24 @@ function panBy(dx) {
   let hi = view.hi + d, lo = view.lo + d;
   if (hi > FULL.hi) { lo -= hi - FULL.hi; hi = FULL.hi; }
   if (lo < FULL.lo) { hi += FULL.lo - lo; lo = FULL.lo; }
+  view = { hi, lo };
+  render();
+}
+function focusOnEvent(e) {
+  const W = svg.clientWidth;
+  const span = view.hi - view.lo;
+  const L = e.L;
+  // Center the event in the view
+  let hi = L + span / 2;
+  let lo = L - span / 2;
+  // Clamp to FULL
+  if (hi > FULL.hi) {
+    hi = FULL.hi;
+    lo = hi - span;
+  } else if (lo < FULL.lo) {
+    lo = FULL.lo;
+    hi = lo + span;
+  }
   view = { hi, lo };
   render();
 }
@@ -176,3 +195,27 @@ const data = await (await fetch('events.json')).json();
 events = data.events.map(e => ({ ...e, L: Math.log10(yearsAgo(e.time, NOW)) }));
 document.getElementById('count').textContent = `${events.length} events`;
 render();
+
+// Search
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const term = searchInput.value.trim();
+    if (term) {
+      const found = events.find(e => 
+        (e.title[lang] ?? e.title.en).toLowerCase().includes(term.toLowerCase())
+      );
+      if (found) {
+        focusOnEvent(found);
+        searchInput.value = '';
+      } else {
+        // Flash placeholder to indicate no match
+        const originalPlaceholder = searchInput.placeholder;
+        searchInput.placeholder = 'No match found';
+        searchInput.value = '';
+        setTimeout(() => {
+          searchInput.placeholder = originalPlaceholder;
+        }, 1500);
+      }
+    }
+  }
+});
