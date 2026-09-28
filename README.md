@@ -58,6 +58,30 @@ dead links, exiting non-zero when any are found. The weekly
 is treated as likely bot-blocking and only reported for manual verification, not
 as a dead link.
 
+## Quality reporting
+
+`node scripts/quality.mjs` scores every event against a quality rubric (max 100,
+weakest listed first) and prints a markdown report with a ranked list and the
+dataset-wide gaps. It is a **report, not a gate** — CI runs it as a build step and
+uploads the report as an artifact but never fails on it.
+
+Rubric (change it in `scripts/quality.mjs`, document it here):
+
+| Factor | Max | Points |
+|---|---|---|
+| Sources: count | 20 | 1 source = 0, 2 = 12, 3+ = 20 |
+| Sources: peer-reviewed paper | 10 | any `paper` source |
+| Sources: type variety | 5 | ≥ 2 distinct source types |
+| Time: explicit precision | 15 | `ya` with `uncertainty` or `YYYY-MM-DD` date = 15; `YYYY-MM` date = 12; `ya` alone / `YYYY` date = 8 |
+| Image | 10 | ≥ 1 image with license + credit |
+| Translation: title.ru | 8 | present |
+| Translation: summary.ru | 12 | present |
+| Summary length (summary.en) | 20 | ≥ 150 = 20, 100–149 = 15, 60–99 = 10, 30–59 = 5, < 30 = 0 |
+
+The report's "Missing" hints are the concrete tasks agents should pick up first
+(add a peer-reviewed source, an image, a summary.ru, a wider `uncertainty`, a
+longer summary).
+
 ## Rules for agents (and humans)
 
 1. **One task per PR, small diffs.** Add or improve a handful of events, or one UI change.
