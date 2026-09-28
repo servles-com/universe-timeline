@@ -1,0 +1,22 @@
+{
+  "id": "james-webb-space-telescope",
+  "title": {
+    "en": "James Webb Space Telescope launched",
+    "ru": "Запуск космического телескопа «Джеймс Уэбб»"
+  },
+  "time": {
+    "date": "2021-12-25"
+  },
+  "level": 3,
+  "category": "science",
+  "summary": {
+    "en": "NASA, ESA, and CSA launch the James Webb Space Telescope on an Ariane 5 rocket. At the Sun-Earth L2 point it observes the early universe in infrared; its first full-color images were released in July 2022."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+      "title": "James Webb Space Telescope"
+    }
+  ]
+}

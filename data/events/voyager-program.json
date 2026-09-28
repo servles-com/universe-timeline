@@ -1,0 +1,22 @@
+{
+  "id": "voyager-program",
+  "title": {
+    "en": "Voyager probes launched",
+    "ru": "Запуск зондов «Вояджер»"
+  },
+  "time": {
+    "date": "1977-09-05"
+  },
+  "level": 3,
+  "category": "technology",
+  "summary": {
+    "en": "NASA's twin Voyager probes, launched in 1977 (Voyager 2 on August 20, Voyager 1 on September 5), fly past Jupiter, Saturn, Uranus, and Neptune carrying the Golden Record. In 2012 Voyager 1 became the first spacecraft to reach interstellar space."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Voyager_program",
+      "title": "Voyager program"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "international-space-station",
+  "title": {
+    "en": "International Space Station assembled",
+    "ru": "Сборка Международной космической станции"
+  },
+  "time": {
+    "date": "1998-11-20"
+  },
+  "level": 3,
+  "category": "technology",
+  "summary": {
+    "en": "Assembly of the largest structure ever built in orbit begins with the launch of the Russian Zarya module. Since Expedition 1 arrived in November 2000, crews have lived aboard the station continuously."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+      "title": "International Space Station"
+    }
+  ]
+}
