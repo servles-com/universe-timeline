@@ -58,6 +58,25 @@ svg.dragging { cursor: grabbing; }
 .event.l1 text { font-weight: 650; font-size: 14px; }
 .event .stem { stroke-width: 1; opacity: .55; }
 .event:hover text, .event:focus text { text-decoration: underline; }
+.event.cluster text { fill: var(--fg); font-size: 12px; font-weight: 700; }
+.event.cluster circle { opacity: .95; }
+.event.cluster:hover circle, .event.cluster:focus circle { stroke: var(--fg); stroke-width: 2; }
+#cluster-pop {
+  position: absolute; z-index: 5; transform: translate(-50%, -100%);
+  min-width: 190px; max-width: 320px; max-height: 45vh; overflow: auto; padding: 6px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.18);
+}
+.cp-item {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  min-width: 0; height: auto; margin: 0; padding: 7px 9px;
+  background: transparent; border: none; border-radius: 8px;
+  color: var(--fg); font: inherit; text-align: left; cursor: pointer;
+}
+.cp-item:hover { background: rgba(128, 128, 128, .16); }
+.cp-item .cp-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--dot); flex: none; }
+.cp-item .cp-title { font-weight: 600; }
+.cp-item .cp-when { margin-left: auto; color: var(--muted); font-size: 12px; white-space: nowrap; }
 .hint { position: absolute; left: 16px; bottom: 8px; margin: 0; color: var(--muted); font-size: 12px; pointer-events: none; }
 aside {
   position: fixed; right: 16px; top: 72px; bottom: 56px; width: min(420px, calc(100vw - 32px));
