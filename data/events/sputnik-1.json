@@ -1,0 +1,23 @@
+{
+  "id": "sputnik-1",
+  "title": {
+    "en": "Sputnik 1: first artificial satellite",
+    "ru": "Спутник-1: первый искусственный спутник"
+  },
+  "time": {
+    "date": "1957-10-04"
+  },
+  "level": 3,
+  "category": "technology",
+  "summary": {
+    "en": "The Soviet Union launches Sputnik 1, the first artificial Earth satellite, into low Earth orbit. Its radio beeps, heard worldwide, open the Space Race between the USSR and the United States."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Sputnik_1",
+      "title": "Sputnik 1"
+    }
+  ],
+  "related": [ "apollo-11" ]
+}

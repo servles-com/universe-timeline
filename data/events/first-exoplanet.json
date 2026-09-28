@@ -1,0 +1,27 @@
+{
+  "id": "first-exoplanet",
+  "title": {
+    "en": "First exoplanet discovered around a Sun-like star",
+    "ru": "Первая экзопланета у звезды, подобной Солнцу"
+  },
+  "time": {
+    "date": "1995-10-06"
+  },
+  "level": 4,
+  "category": "science",
+  "summary": {
+    "en": "Michel Mayor and Didier Queloz announce 51 Pegasi b, the first planet found orbiting a Sun-like star, launching the modern search for exoplanets. They shared the 2019 Nobel Prize in Physics for the discovery."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/51_Pegasi_b",
+      "title": "51 Pegasi b"
+    },
+    {
+      "type": "paper",
+      "url": "https://doi.org/10.1038/378355a0",
+      "title": "Mayor & Queloz, A Jupiter-mass companion to a solar-type star, Nature 378 (1995)"
+    }
+  ]
+}

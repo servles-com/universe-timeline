@@ -1,0 +1,22 @@
+{
+  "id": "mars-rovers",
+  "title": {
+    "en": "First Mars rover lands on Mars",
+    "ru": "Первый марсоход на Марсе"
+  },
+  "time": {
+    "date": "1997-07-04"
+  },
+  "level": 4,
+  "category": "technology",
+  "summary": {
+    "en": "NASA's Mars Pathfinder lands Sojourner, the first rover to drive across another planet's surface. Later NASA rovers — Spirit, Opportunity, Curiosity, and Perseverance — continue exploring Mars."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Mars_rover",
+      "title": "Mars rover"
+    }
+  ]
+}

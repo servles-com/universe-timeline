@@ -1,0 +1,23 @@
+{
+  "id": "yuri-gagarin",
+  "title": {
+    "en": "Yuri Gagarin: first human in space",
+    "ru": "Юрий Гагарин: первый человек в космосе"
+  },
+  "time": {
+    "date": "1961-04-12"
+  },
+  "level": 3,
+  "category": "technology",
+  "summary": {
+    "en": "Soviet cosmonaut Yuri Gagarin completes one orbit of Earth aboard Vostok 1, flying for 108 minutes and becoming the first human in space."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Vostok_1",
+      "title": "Vostok 1"
+    }
+  ],
+  "related": [ "apollo-11", "sputnik-1" ]
+}

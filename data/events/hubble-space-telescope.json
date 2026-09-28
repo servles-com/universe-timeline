@@ -1,0 +1,22 @@
+{
+  "id": "hubble-space-telescope",
+  "title": {
+    "en": "Hubble Space Telescope launched",
+    "ru": "Запуск космического телескопа «Хаббл»"
+  },
+  "time": {
+    "date": "1990-04-24"
+  },
+  "level": 3,
+  "category": "science",
+  "summary": {
+    "en": "NASA and ESA launch the Hubble Space Telescope into low Earth orbit aboard Space Shuttle Discovery. From above the distorting atmosphere it captures high-resolution images that transform astronomy, from measuring the expansion of the universe to imaging deep fields of distant galaxies."
+  },
+  "sources": [
+    {
+      "type": "wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Hubble_Space_Telescope",
+      "title": "Hubble Space Telescope"
+    }
+  ]
+}
