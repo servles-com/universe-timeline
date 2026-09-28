@@ -4,6 +4,7 @@
 import { yearsAgo, UNIVERSE_AGE, nowYear } from './lib.mjs';
 
 const svg = document.getElementById('timeline');
+const pop = document.getElementById('cluster-pop');
 const NS = 'http://www.w3.org/2000/svg';
 const FULL = { hi: Math.log10(UNIVERSE_AGE * 1.08), lo: Math.log10(1) };   // hi = left edge, lo = right edge
 let view = { ...FULL };
@@ -18,6 +19,9 @@ const el = (tag, attrs = {}, parent) => {
   if (parent) parent.appendChild(n);
   return n;
 };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[c]));
+const CLUSTER_GAP = 20;          // px: events closer than this are collapsed into one "+N" node
+let popTimer, popPinned;
 
 // Which levels are visible for a given zoom span (in decades of time).
 function maxLevel(span) {
@@ -48,6 +52,7 @@ function formatWhen(e) {
 }
 
 function render() {
+  hideClusterPop();
   const W = svg.clientWidth, H = svg.clientHeight;
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.replaceChildren();
@@ -68,41 +73,111 @@ function render() {
   el('line', { class: 'baseline', x1: 0, x2: W, y1: baseY, y2: baseY }, svg);
 
   // Events: visible levels only, laid out in rows so labels do not overlap.
+  // When a view is so dense that not every event fits a label row, the leftovers
+  // are collapsed into "+N" clusters (shown on hover / tap) instead of piling up.
   const lvl = maxLevel(span);
   const visible = events
     .filter(e => e.level <= lvl && e.L <= view.hi && e.L >= view.lo)
     .sort((a, b) => a.level - b.level || b.L - a.L);
   const rows = [];            // per row: right edge of the last label
-  const rowH = 22, maxRows = Math.max(3, Math.floor((baseY - 16) / rowH));
+  const rowH = 22;
+  const maxRows = Math.max(3, Math.min(9, Math.floor((baseY - 16) / rowH)));
   const g = el('g', {}, svg);
+  const packed = [];          // events that could not get a label row
   for (const e of visible) {
     const px = x(e.L);
     const label = e.title[lang] ?? e.title.en;
     const w = label.length * 7.2 + 14;
     const left = px + w > W ? px - w : px;
     let row = rows.findIndex(r => r < left);
-  if (row === -1 && rows.length < maxRows) { row = rows.length; rows.push(-Infinity); }
-  const color = `var(--c-${e.category})`;
-  const node = el('g', { class: `event l${e.level}`, tabindex: 0, role: 'button', 'aria-label': label }, g);
-  el('circle', { cx: px, cy: baseY, r: e.level === 1 ? 6 : 4, fill: color }, node);
-  if (row !== -1) {
+    if (row === -1 && rows.length < maxRows) { row = rows.length; rows.push(-Infinity); }
+    if (row === -1) { packed.push(e); continue; }
     rows[row] = left + w;
+    const color = `var(--c-${e.category})`;
+    const node = el('g', { class: `event l${e.level}`, tabindex: 0, role: 'button', 'aria-label': label }, g);
+    el('circle', { cx: px, cy: baseY, r: e.level === 1 ? 6 : 4, fill: color }, node);
     const y = baseY - 18 - row * rowH;
     el('line', { class: 'stem', x1: px, x2: px, y1: baseY, y2: y + 4, stroke: color }, node);
     const flip = px + w > W;                       // near the right edge: label to the left
     const t = el('text', { x: flip ? px - 4 : px + 4, y, 'text-anchor': flip ? 'end' : 'start' }, node);
     t.textContent = label;
+    node.addEventListener('click', () => open(e));
+    node.addEventListener('keydown', k => { if (k.key === 'Enter') open(e); });
   }
-  node.addEventListener('click', () => open(e));
-  node.addEventListener('keydown', k => { if (k.key === 'Enter') open(e); });
-  }
+  renderClusters(packed, { g, baseY });
   document.getElementById('range').textContent =
     `${formatAgo(10 ** view.hi)} → ${formatAgo(10 ** view.lo)} · detail ${lvl}/6 · ${visible.length} shown`;
 }
 
+// Collapse the events that had no room for a label into "+N" clusters. Nearby
+// events (within CLUSTER_GAP px) share one cluster node; hovering or tapping it
+// pops up the list of contained events.
+function renderClusters(list, { g, baseY }) {
+  if (!list.length) return;
+  const W = svg.clientWidth, span = view.hi - view.lo;
+  const px = L => (view.hi - L) / span * W;
+  const groups = [[list[0]]];
+  for (const e of list.slice(1)) {
+    const last = groups[groups.length - 1];
+    if (px(e.L) - px(last[last.length - 1].L) <= CLUSTER_GAP) last.push(e);
+    else groups.push([e]);
+  }
+  for (const grp of groups) {
+    const cx = grp.length > 1 ? px(grp.reduce((s, e) => s + e.L, 0) / grp.length) : px(grp[0].L);
+    const label = grp.length > 1 ? `+${grp.length}` : grp[0].title[lang] ?? grp[0].title.en;
+    const node = el('g', { class: 'event cluster', tabindex: 0, role: 'button', 'aria-label': grp.map(e => e.title.en).join(', ') }, g);
+    el('circle', { cx, cy: baseY, r: grp.length > 1 ? 8 : 5, fill: grp.length > 1 ? 'var(--accent)' : `var(--c-${grp[0].category})` }, node);
+    if (grp.length > 1) {
+      const t = el('text', { x: cx, y: baseY - 13, 'text-anchor': 'middle' }, node);
+      t.textContent = label;
+    }
+    node.addEventListener('pointerenter', () => showClusterPop(grp, cx, baseY));
+    node.addEventListener('pointerleave', scheduleClusterHide);
+    node.addEventListener('click', () => showClusterPop(grp, cx, baseY, true));
+    node.addEventListener('keydown', k => {
+      if (k.key === 'Enter') { k.preventDefault(); showClusterPop(grp, cx, baseY); }
+      if (k.key === 'Escape') hideClusterPop();
+    });
+  }
+}
+
+function scheduleClusterHide() { if (popPinned) return; clearTimeout(popTimer); popTimer = setTimeout(hideClusterPop, 250); }
+
+// `pinned` is set on click/tap so the list stays open for touch users; hover
+// reveals it temporarily and hides again once the pointer leaves.
+function showClusterPop(grp, cx, baseY, pinned = false) {
+  if (svg.classList.contains('dragging')) return;
+  clearTimeout(popTimer);
+  popPinned = pinned;
+  pop.innerHTML = grp.map(e =>
+    `<button type="button" class="cp-item" data-id="${esc(e.id)}" style="--dot:var(--c-${esc(e.category)})">` +
+    `<span class="cp-dot"></span><span class="cp-title">${esc(e.title[lang] ?? e.title.en)}</span>` +
+    `<span class="cp-when">${esc(formatWhen(e))}</span></button>`).join('');
+  pop.hidden = false;
+  const W = svg.clientWidth;
+  const left = Math.min(Math.max(cx, 110), Math.max(110, W - 110));
+  pop.style.left = `${left}px`;
+  pop.style.top = `${Math.max(8, baseY - pop.offsetHeight - 14)}px`;
+}
+
+function hideClusterPop() { clearTimeout(popTimer); pop.hidden = true; popPinned = false; }
+pop.addEventListener('pointerenter', () => clearTimeout(popTimer));
+pop.addEventListener('pointerleave', scheduleClusterHide);
+pop.addEventListener('click', ev => {
+  const b = ev.target.closest('.cp-item');
+  if (!b) return;
+  const e = events.find(ev0 => ev0.id === b.dataset.id);
+  if (e) { hideClusterPop(); open(e); }
+});
+pop.addEventListener('keydown', k => { if (k.key === 'Escape') hideClusterPop(); });
+document.addEventListener('click', ev => {
+  if (pop.hidden) return;
+  if (ev.target.closest('#cluster-pop') || ev.target.closest('.cluster')) return;
+  hideClusterPop();
+});
+
 function open(e) {
   const body = document.getElementById('panel-body');
-  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&', '<': '<', '>': '>', '"': '"', "'": ''' }[c]));
   const imgs = (e.images ?? []).map(i =>
     `<img src="${esc(i.url)}" alt="" loading="lazy"><p class="credit">${esc(i.credit)} · ${esc(i.license)}</p>`).join('');
   const srcs = e.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title ?? s.url)}</a> <small>(${esc(s.type)})</small></li>`).join('');
